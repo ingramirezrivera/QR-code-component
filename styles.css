@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --LightGray: hsl(212, 45%, 89%);
+    --GrayishBlue: hsl(220, 15%, 55%);
+    --DarkBlue: hsl(218, 44%, 22%);
+    --Outfit: 'Outfit', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--Outfit);
+    background-color: var(--LightGray);
+    font-size: 1.5rem;
+}
+.main-container  {
+    background-color: var(--White);
+    width: 320px;
+    height: 500px;
+    margin: 160px auto 50px;
+    border-radius: 16px;
+    padding: 16px;
+    overflow: hidden;
+    box-shadow: -1px 4px 14px 1px rgba(176,176,176,1);
+    transition: 300ms;
+
+}
+.main-container:hover {
+    cursor: pointer;
+    margin-top: 158px;
+    box-shadow: 10px 10px 10px;
+    transition: 300ms;
+}
+.img-container {
+    background-image: url('./images/image-qr-code.png');
+    width: 288px;
+    height: 288px;
+    background-size: cover;
+    border-radius: 16px;
+    margin-bottom: 26px;
+    animation: upCenter 500ms none;
+
+}
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--DarkBlue);
+    animation:  leftCenter 500ms none;
+}
+p{
+    text-align: center;
+    color: var(--GrayishBlue);
+    font-size: 1.5rem;
+    margin: 0 14px;
+    animation: rigthCenter 500ms none;
+}
+
+
+/************ Footer **************/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/************* Animations *********/
+@keyframes upCenter {
+    0%{
+        transform: translateY(-500px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes leftCenter {
+    0% {
+        transform: translateX(-500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+@keyframes rigthCenter {
+    0%{
+        transform: translateX(1000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
